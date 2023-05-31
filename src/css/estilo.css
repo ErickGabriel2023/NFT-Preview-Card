@@ -1,0 +1,157 @@
+body {
+    background-color:  hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color:  hsl(216, 50%, 16%);
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px 20px hsl(217, 60%, 10%);
+}
+
+.imagem_nft {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.imagem_link {
+    position: relative;
+}
+
+.imagem_link::before {
+    content: '';
+    background-color: hsl(178, 100%, 50%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.imagem_link::after {
+    content: '';
+    background: url(./icon-view.svg) no-repeat center;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.imagem_link:hover::before {   
+    display: block;
+    opacity: 0.4;
+}
+
+.imagem_link:hover::after {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+}
+
+
+.container_informativo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container_informativo h1 {
+    font-size: 20px;
+    color: hsl(0, 0%, 100%);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    transform: scale(1.01);
+}
+
+.container_informativo .descricao {
+    font-size: 15px;
+    color: hsl(215, 51%, 70%);
+}
+
+.container_valores {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.container_valores .valor_eth {
+    font-size: 13px;
+    font-weight: bold;
+    color: hsl(178, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.container_valores .icon_eth  {
+    width: 9px;
+}
+
+.container_valores .time {
+    font-size: 13px;
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.container_valores .icon_time {
+    width: 14px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+footer .foto_perfil {
+    width: 10%;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+footer .descricao_usuario {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.descricao_usuario .linke {
+   color: hsl(0, 0%, 100%);
+}
+
+.linke:hover {
+    color: hsl(178, 100%, 50%);
+    transform: scale(1.01);
+}
+
+.descricao_usuario span {
+    color: hsl(215, 51%, 70%);
+}
